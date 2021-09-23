@@ -10,8 +10,8 @@
 		Obesidade, quando o resultado é maior que 30 kg/m
 	*/
 
-	$altura = 1.54;
-	$peso = 57;
+	$altura = 1.80;
+	$peso = 95;
 
 	$imc = $peso / $altura ** 2;
 
