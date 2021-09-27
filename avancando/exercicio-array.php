@@ -1,49 +1,35 @@
 <?php
 
-	$carroList = [
-		'sb456' =>
-	[
-		'marca' => 'fiat',
-		'modelo' => 'argo',
-		'ano' => 2021,
-		'cor' => 'prata',
-		'tipo' => 'heth',
-		'valor' => 65000
-	],
-		
-	
-		'sb867' =>
-	[
-		'marca' => 'ford',
-		'modelo' => 'ka',
-		'ano' => 2019,
-		'cor' => 'preto',
-		'tipo' => 'heth',
-		'valor' => 45000
-	],
+ $aluno = [
+ 	10325 =>
+ 	[
+ 		'nome' => 'whashiton',
+ 		'nota1bi' => 7.0,
+ 		'nota2bi' => 9.0,
+ 		'nota3bi' => 8.0,
+ 		'nota4bi' => 8.5
+ 	],
 
-	
-		'sb885' =>
-	[
-		'marca' => 'volkswagem',
-		'modelo' => 'polo',
-		'ano' => 2008,
-		'cor' => 'verde',
-		'tipo' => 'sedan',
-		'valor' => 15000
-	]
-	];
+ 	10326 =>
+ 	[
+ 		'nome' => 'Elizangela',
+ 		'nota1bi' => 7.0,
+ 		'nota2bi' => 8.5,
+ 		'nota3bi' => 7.5,
+ 		'nota4bi' => 8.5
+ 	],
 
-	$carroList ['sb123'] = [
-		'marca' => 'bmw',
-		'modelo' => 'S2',
-		'ano' => 2015,
-		'cor' => 'azul',
-		'tipo' => 'heth',
-		'valor' => 150000
-	];
+ 	10327 =>
+ 	[
+ 		'nome' => 'whashiton',
+ 		'nota1bi' => 7.5,
+ 		'nota2bi' => 9.0,
+ 		'nota3bi' => 6.0,
+ 		'nota4bi' => 5.5
+ 	]
+ 
+ ];	
 
-	foreach($carroList as $chassi => $carros){
-		echo $chassi." ". $carros['marca']. " ". $carros['modelo']." ".$carros['ano']." ". $carros['cor']." ".$carros['tipo']." ".$carros['valor'] .PHP_EOL;
-	}
-
+ foreach ($aluno as $ra => $alunaNotas) {
+ 		echo $ra . PHP_EOL;
+ }
