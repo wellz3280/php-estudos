@@ -1,13 +1,38 @@
 <?php
+    
+    function notas($n1,$n2,$n3,$n4){
+       
+     $resultado =  ($n1+$n2+$n3+$n4) / 4;
+
+        if($resultado <= 5)
+        {
+            exibeMensagem($resultado." REPROVADO");
+            
+        }
+        else
+        {
+            exibeMensagem ($resultado." APROVADO");
+
+        }
+        
+
+        return $resultado;
+    }
+
+
+    function exibeMensagem($mensagem)
+    {
+        echo $mensagem . PHP_EOL;
+    }
 
  $aluno = [
  	10325 =>
  	[
  		'nome' => 'whashiton',
- 		'nota1bi' => 7.0,
- 		'nota2bi' => 9.0,
- 		'nota3bi' => 8.0,
- 		'nota4bi' => 8.5
+ 		'nota1bi' => 4.0,
+ 		'nota2bi' => 3.0,
+ 		'nota3bi' => 2.0,
+ 		'nota4bi' => 1.5
  	],
 
  	10326 =>
@@ -30,6 +55,12 @@
  
  ];	
 
+
+
+
  foreach ($aluno as $ra => $alunaNotas) {
- 		echo $ra . PHP_EOL;
+
+    notas($alunaNotas['nota1bi'],$alunaNotas['nota2bi'],$alunaNotas['nota3bi'],$alunaNotas['nota4bi']);
+
+ 	exibeMensagem($ra." ".$alunaNotas['nome']." / ".$alunaNotas['nota1bi']." / ".$alunaNotas['nota2bi']." / ".$alunaNotas['nota3bi']." / ".$alunaNotas['nota4bi']);
  }
