@@ -1,41 +1,7 @@
 <?php
 	//array associativos e foreach
+	require_once 'funcoes.php';
 	
-	function sacar( array $conta ,float $valorAsacar): array
-	{
-			if($valorAsacar > $conta['saldo'])
-		{
-			exibeMensagem("saldo Insulficiente");
-		}
-		else{
-			$conta['saldo'] -= $valorAsacar ;
-		}
-
-		return $conta;
-	}
-	
-	function depositar(array $conta,float $valorAdepositar):array
-	{
-
-		if($valorAdepositar > 0){
-
-		$conta['saldo'] += $valorAdepositar;
-		}
-		else{
-			exibeMensagem("Não é possivel realizar este depósito.");
-		}
-
-		return $conta;
-	}
-	
-
-
-	function exibeMensagem(string $mensagem)
-	{
-		echo $mensagem . PHP_EOL;
-	}
-
-
 	$contasCorrentes = [
 
 		36529972803 => 
@@ -60,9 +26,15 @@
 	
 	$contasCorrentes[36529972803] = depositar($contasCorrentes[36529972803],3500);
 
+	titularcomletrasmaiscula($contasCorrentes[36529972803]);
 	
+	unset($contasCorrentes [12767278912]);
+
 	//foreach (para cada um)
 foreach($contasCorrentes as $cpf => $contas){
-	exibeMensagem( "$cpf $contas[titular] $contas[saldo]");
+	//list
+	['titular' => $titular, 'saldo' => $saldo ]= $contas;
+	
+	exibeMensagem( "$cpf $titular $saldo");
 }	
 	
