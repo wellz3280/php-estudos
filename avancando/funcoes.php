@@ -36,5 +36,5 @@
 
 	function exibeMensagem(string $mensagem)
 	{
-		echo $mensagem . PHP_EOL;
+		echo $mensagem . '<br>';
 	}
